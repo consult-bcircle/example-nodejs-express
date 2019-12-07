@@ -28,4 +28,4 @@ jobs:
             docker build -t zarakong/bcr:${CIRCLE_SHA1} .
             docker push zarakong/bcr:latest
             docker push zarakong/bcr:${CIRCLE_SHA1}
-      - run: echo Done
+      - run: echo Done2
