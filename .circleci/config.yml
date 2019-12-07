@@ -23,8 +23,8 @@ jobs:
           name: "Build docker image and push to docker hub"
           command: |
             cp Dockerfile.production Dockerfile
-            docker build -t ima8/exemple-nodejs-circle:latest .
-            docker build -t ima8/exemple-nodejs-circle:${CIRCLE_SHA1} .
-            docker push ima8/exemple-nodejs-circle:latest
-            docker push ima8/exemple-nodejs-circle:${CIRCLE_SHA1}
+            docker build -t zarakong/bcr:latest .
+            docker build -t zarakong/bcr:${CIRCLE_SHA1} .
+            docker push zarakong/bcr:latest
+            docker push zarakong/bcr:${CIRCLE_SHA1}
       - run: echo Done
