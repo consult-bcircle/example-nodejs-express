@@ -28,11 +28,11 @@ jobs:
             docker build -t zarakong/bcr:${CIRCLE_SHA1} .
             docker push zarakong/bcr:latest
             docker push zarakong/bcr:${CIRCLE_SHA1}
-          elif ["${CIRCLE_BRANCH}" == "staging"]; then
+           elif ["${CIRCLE_BRANCH}" == "staging"]; then
             cp Dockerfile.staging Dockerfile
             docker build -t zarakong/bcr:latest .
             docker push zarakong/bcr:latest
-          else
+           else
             echo "THIS IS ${CIRCLE_BRANCH} "
-          fi
+           fi
       - run: echo Done2
